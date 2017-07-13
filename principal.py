@@ -41,13 +41,14 @@ def reg(palabra, tiempo, persona):
         final = tipo[tiem][pers]
     else:
         final = tipo[tiem]
-    # return palabra[:-2] + final
-    return palabra
+    print palabra[:-2] + final
 
 def prin(palabra, tiempo, persona):
     if palabra in conj.verbos_ir:
         irreg(palabra, tiempo, persona)
+    else:
+        reg(palabra, tiempo, persona)
 
 
 if __name__ == '__main__':
-    prin("estar", 'presente', 'tu')
+    prin("hablar", 'presente', 'tu')
