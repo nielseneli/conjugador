@@ -30,6 +30,20 @@ def irreg(palabra, tiempo, persona):
         verbo = conj.verbos_ir[palabra][tiem]
     print verbo
 
+def reg(palabra, tiempo, persona):
+    "Imprimir las conjugaciones de los verbos regulares."
+    # Encontrar las indices de las listas
+    pers = conj.personas[persona]
+    tiem = conj.tiempos[tiempo]
+    # ?Cual tipo de verbo regular?
+    tipo = conj.final_re[palabra[-2:]]
+    if tiem > 0:
+        final = tipo[tiem][pers]
+    else:
+        final = tipo[tiem]
+    # return palabra[:-2] + final
+    return palabra
+
 def prin(palabra, tiempo, persona):
     if palabra in conj.verbos_ir:
         irreg(palabra, tiempo, persona)

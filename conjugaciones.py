@@ -38,5 +38,3 @@ final_re = {'ar': [
                 ['o', 'es', 'e', 'imos', 'is', 'en']
             ]
             }
-
-estar = ['estoy', 'estas', 'esta', 'estamos', 'estais', 'estan']
